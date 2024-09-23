@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2020 Tobias Maedel
+# Copyright (C) 2020 Sarah Maedel
 
 # FIT will be loaded at 0x02080000. Leave 16M for that, align it to 2M and load the kernel after it.
 KERNEL_LOADADDR := 0x03200000
@@ -88,6 +88,14 @@ define Device/friendlyarm_nanopi-r5s
   DEVICE_PACKAGES := kmod-r8169
 endef
 TARGET_DEVICES += friendlyarm_nanopi-r5s
+
+define Device/friendlyarm_nanopi-r6c
+  DEVICE_VENDOR := FriendlyARM
+  DEVICE_MODEL := NanoPi R6C
+  SOC := rk3588s
+  DEVICE_PACKAGES := kmod-r8169
+endef
+TARGET_DEVICES += friendlyarm_nanopi-r6c
 
 define Device/friendlyarm_nanopi-r6s
   DEVICE_VENDOR := FriendlyARM
